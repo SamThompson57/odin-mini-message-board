@@ -1,0 +1,16 @@
+<!-- index.ejs -->
+<html>
+  <head>
+    <title>Message App</title>
+  </head>
+  <body>
+    <ul>
+      <% messages.forEach((message) => { %>
+        <%- include('message', {message: message}); %>
+      <% }); %>
+    </ul>
+    <a href="new">New Message</a>
+    <%- include('footer') %>
+  </body>
+</html>
+
